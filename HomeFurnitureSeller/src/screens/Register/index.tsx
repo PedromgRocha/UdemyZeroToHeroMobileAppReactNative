@@ -8,10 +8,10 @@ import Button from "../../components/Button";
 import Seperator from "../../components/Seperator";
 import GoogleLogin from "../../components/GoogleLogin";
 
-function SignUp(): React.JSX.Element {
+function Register(): React.JSX.Element {
     const [checked, setChecked] = useState(false);
 
-    const onSignIn = ():void => {
+    const onRegister = ():void => {
         console.log('ola');
     }; 
 
@@ -36,10 +36,10 @@ function SignUp(): React.JSX.Element {
 
             <Text style={styles.footerText}>
                 Already have an account?
-                <Text onPress={onSignIn} style={styles.footerLink}> Log in</Text>
+                <Text onPress={onRegister} style={styles.footerLink}> Log in</Text>
             </Text>
         </SafeAreaView>
     );
 }
 
-export default  React.memo(SignUp);
+export default  React.memo(Register);
