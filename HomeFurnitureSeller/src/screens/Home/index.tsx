@@ -9,7 +9,7 @@ import Header from '../../components/Header';
 import CategoryBox from '../../components/CategoryBox';
 import ProductHomeItem from '../../components/ProductHomeItem';
 
-function Home():  React.JSX.Element {
+function Home({navigation}: any):  React.JSX.Element {
     const [selectedCategory, setSelectedCategory] = useState();
     const [keyword, setKeyword]: [any,any]= useState();
     const [filteredProducts, setFilteredProducts] = useState(products);
@@ -44,8 +44,15 @@ function Home():  React.JSX.Element {
     }
 
     const renderProductItem = ({ item }: any): React.JSX.Element => {
+        const onProductPress = (product:any) =>{
+            navigation.navigate('ProductDetails', {product});
+        };
+        
         return (
-            <ProductHomeItem {...item} />
+            <ProductHomeItem 
+            onPress={()=> onProductPress(item)}
+            {...item} 
+            />
         )
     }
 

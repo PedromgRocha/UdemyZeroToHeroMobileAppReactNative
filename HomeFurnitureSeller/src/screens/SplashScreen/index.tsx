@@ -24,7 +24,9 @@ function Splash({navigation}:any): React.JSX.Element {
                 <Text style={styles.title}>Here!</Text>
             </View>
 
-            <Button onPress={onRegister} title={"Sign Up"} />
+            <View style= {styles.buttonContainer}>
+                <Button onPress={onRegister} title={"Sign Up"} />
+            </View>
 
             <Pressable onPress={onLoging} hitSlop={20}>
                 <Text style={styles.footerText}> Sing in</Text>

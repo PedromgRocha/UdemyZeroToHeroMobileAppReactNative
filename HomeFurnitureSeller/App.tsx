@@ -11,6 +11,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './src/screens/Home';
 import Favourites from './src/screens/Favourites';
 import Profile from './src/screens/Profile';
+import ProductDetails from './src/screens/ProductDetails';
 import { Image } from 'react-native';
 
 const Tab = createBottomTabNavigator();
@@ -67,6 +68,7 @@ function App(): React.JSX.Element {
           {isSignedIn ? (
             <>
               <Stack.Screen name="Tabs" component={Tabs} options={{ headerShown: false }} />
+              <Stack.Screen name="ProductDetails" component={ProductDetails} options={{ headerShown: false }} />
             </>
           ) : (
             <>

@@ -6,10 +6,14 @@ import { products } from '../../data/products';
 import FavouriteItem from '../../components/FavouriteItem';
 import Header from '../../components/Header';
  
-const Favourites = () => {
+const Favourites = ({navigation}: any) => {
+
     const renderItem = ({item}: any) => {
+        const onProductPress = () => {
+            navigation.navigate('ProductDetails', {product: item})
+        }
         return(
-            <FavouriteItem {...item}></FavouriteItem>
+            <FavouriteItem onPress={onProductPress} {...item}></FavouriteItem>
         );
     }
     return (
