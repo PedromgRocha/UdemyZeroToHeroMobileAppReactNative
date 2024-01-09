@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, TextInput, Pressable, Image } from "react-native";
 import { styles } from "./styles";
 
-function Input({ label, placeHolder, isPassword }: any): React.JSX.Element {
+function Input({ label, placeHolder, isPassword, value, onChangeText }: any): React.JSX.Element {
     const [isPasswordVisible, setPasswordIsVisible] = useState(false);
 
     const onEyePress = (): void => {
@@ -13,7 +13,7 @@ function Input({ label, placeHolder, isPassword }: any): React.JSX.Element {
         <View style={styles.container}>
             <Text style={styles.label}>{label}</Text>
             <View style={styles.inputContainer}>
-                <TextInput secureTextEntry={isPassword && !isPasswordVisible} placeholder={placeHolder} style={styles.input} />
+                <TextInput value={value} onChangeText={onChangeText} secureTextEntry={isPassword && !isPasswordVisible} placeholder={placeHolder} style={styles.input} />
 
                 {isPassword ? (
                     <Pressable onPress={onEyePress}>
