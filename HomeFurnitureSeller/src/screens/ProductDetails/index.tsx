@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Pressable, ScrollView, Text, View } from "react-native";
+import { Image, Linking, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { styles } from './styles';
 import Button from "../../components/Button";
@@ -11,6 +11,16 @@ function ProductDetails({navigation, route}: any): React.JSX.Element {
     const onBackPress = () => {
         navigation.goBack();
     }
+
+    const onContact = () => {
+        //Make a phone call
+        const phone = '919994611';
+        Linking.openURL(`tel: ${phone}`);
+        //Send an email
+        const email = ''
+        Linking.openURL(`mail to : ${email}`);
+    }
+
     return (
         <SafeAreaView style={styles.safe}>
             <ScrollView style={styles.container}>
@@ -36,7 +46,7 @@ function ProductDetails({navigation, route}: any): React.JSX.Element {
                 <Pressable style={styles.bookmarkContainer}>
                     <Image style={styles.bookmarkIcon} source={require('../../assets/bookmark_blue.png')}></Image>
                 </Pressable>
-                <Button title='Contact Seller'> </Button>
+                <Button onPress={onContact} title='Contact Seller'> </Button>
             </View>
         </SafeAreaView>
     );

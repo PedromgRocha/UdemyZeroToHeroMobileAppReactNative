@@ -2,7 +2,7 @@ import React from "react";
 import { Image, Pressable, Text, View } from "react-native";
 import { styles } from "./styles";
 
-function ProductHomeItem({title,price,image, onPress}:any): React.JSX.Element{
+function ListItem({title,price,image, onPress}:any): React.JSX.Element{
     return(
         <Pressable onPress={onPress} style={styles.container}>
             <Image style={styles.image} source={{uri:image}}></Image>
@@ -12,4 +12,4 @@ function ProductHomeItem({title,price,image, onPress}:any): React.JSX.Element{
     );
 }
 
-export default React.memo(ProductHomeItem);
+export default React.memo(ListItem);
