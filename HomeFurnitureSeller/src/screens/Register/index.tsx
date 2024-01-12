@@ -6,7 +6,7 @@ import Input from "../../components/Input";
 import Checkbox from "../../components/Checkbox";
 import Button from "../../components/Button";
 import Seperator from "../../components/Seperator";
-import GoogleLogin from "../../components/GoogleLogin";
+//import GoogleLogin from "../../components/GoogleLogin";
 
 function Register({ navigation }: any): React.JSX.Element {
     const [checked, setChecked] = useState(false);
@@ -36,8 +36,6 @@ function Register({ navigation }: any): React.JSX.Element {
                 <Button style={styles.button} title="Sign Up" />
 
                 <Seperator text='Or sign Up with'> </Seperator>
-
-                <GoogleLogin></GoogleLogin>
 
                 <Text style={styles.footerText}>
                     Already have an account?

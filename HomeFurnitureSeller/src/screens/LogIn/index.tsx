@@ -5,7 +5,7 @@ import AuthHeader from "../../components/AuthHeader";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 import Seperator from "../../components/Seperator";
-import GoogleLogin from "../../components/GoogleLogin";
+//import GoogleLogin from "../../components/GoogleLogin";
 
 
 function LogIn({ navigation }: any): React.JSX.Element {
@@ -29,8 +29,6 @@ function LogIn({ navigation }: any): React.JSX.Element {
                 <Button style={styles.button} title="Log In" />
 
                 <Seperator text='Or Log In with'> </Seperator>
-
-                <GoogleLogin></GoogleLogin>
 
                 <Text style={styles.footerText}>
                     Don't have an account?

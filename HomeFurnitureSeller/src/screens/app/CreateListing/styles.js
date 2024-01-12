@@ -1,15 +1,15 @@
-import { StyleSheet } from "react-native";
-import {colors} from "../../utils/colors";
- 
+import { StyleSheet } from 'react-native';
+import { colors } from '../../../utils/colors';
+
 export const styles = StyleSheet.create({
     container: {
         padding: 24,
     },
     sectionTitle: {
-       fontWeight: '500',
-       fontSize: 14,
-       color: colors.blue,
-       marginBottom: 16,
+        fontWeight: '500',
+        fontSize: 14,
+        color: colors.blue,
+        marginBottom: 16,
     },
     image: {
         width: 100,
@@ -31,12 +31,12 @@ export const styles = StyleSheet.create({
     },
     uploadCircle: {
         width: 32,
-        height: 42,
+        height: 32,
         borderRadius: 20,
         backgroundColor: colors.lightGrey,
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'center'
     },
     uploadPlus: {
         color: colors.white,
@@ -49,20 +49,22 @@ export const styles = StyleSheet.create({
         flexWrap: 'wrap',
         paddingBottom: 16,
     },
-    imageContainer: {
+    imageCont: {
         flexDirection: 'row',
-        marginRight: 8,
         marginTop: 8,
+        marginRight: 8,
     },
     delete: {
         width: 24,
         height: 24,
         marginLeft: -16,
-        marginTop: 10,
+        marginTop: -10,
     },
-    textArea: {
+    textarea: {
         minHeight: 150,
-        paddingTop:  24,
-        textAlignVertical: 'top',
+        paddingTop: 16,
+    },
+    button: {
+        marginBottom: 160,
     }
-})
+});
